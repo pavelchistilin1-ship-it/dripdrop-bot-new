@@ -174,10 +174,12 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         user = get_user(user_id)
     role_name = {'trader': 'Трейдер', 'moderator': 'Модератор', 'super_moderator': 'Супер-модератор'}.get(user[2], 'Трейдер')
     welcome_text = (
-        f"⠀ ⠀ ⠀ ⠀ 🌊 **DripDropPay** 🌊\n"
-        f"       ━━━━━━━━━━━━\n"
-        f"👤 Вы вошли как **{role_name} #{user_id}**\n\n"
-        f"> Используйте меню ниже для работы."
+        f"🌊 **DripDropPay** 🌊\n"
+        f"━━━━━━━━━━━━\n"
+        f"👤 **Вы вошли как {role_name}**\n"
+        f"**#{user_id}**\n"
+        f"━━━━━━━━━━━━\n\n"
+        f"**[Наш тгк](https://t.me/DripDropInfo)**"
     )
     try:
         await update.message.reply_photo(photo=WELCOME_PHOTO_URL, caption=welcome_text, reply_markup=get_main_keyboard(user[2]), parse_mode='Markdown')

@@ -177,7 +177,7 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
         f"🌊 **DripDropPay** 🌊\n"
         f"━━━━━━━━━━━━\n"
         f"👤 **Вы вошли как {role_name}**\n"
-        f"**#{user_id}**\n"
+        f"> **#{user_id}**\n"
         f"━━━━━━━━━━━━\n\n"
         f"**[Наш тгк](https://t.me/DripDropInfo)**"
     )
